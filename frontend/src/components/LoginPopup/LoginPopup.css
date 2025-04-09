@@ -66,3 +66,72 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+/* Login method toggle */
+.login-method-toggle {
+    display: flex;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #C9C9C9;
+    background: white;
+}
+
+.login-method-toggle button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    color: #49557E; /* Default text color */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-method-toggle button.active {
+    background: #FF4C24;
+    color: white; /* White text for active state */
+}
+
+/* Phone input specific styles */
+.phone-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.phone-input-container select {
+    width: 80px;
+    padding: 10px;
+    border: 1px solid #C9C9C9;
+    border-radius: 4px;
+    color: #49557E;
+    background: white;
+}
+
+/* OTP inputs */
+.otp-container {
+    margin-top: 10px;
+}
+
+.otp-container p {
+    color: #49557E;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.otp-inputs {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.otp-inputs input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #C9C9C9;
+    border-radius: 4px;
+    color: #49557E;
+}
