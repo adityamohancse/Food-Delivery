@@ -1,6 +1,5 @@
-
 import express from 'express';
-import { sendOTP, verifyOTP } from '../controllers/authController.js'; // Ensure this path is correct
+import { sendOTP, verifyOTP } from '../controllers/authController.js'; // Fixed path
 
 const router = express.Router();
 
