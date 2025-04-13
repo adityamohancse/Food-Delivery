@@ -1,12 +1,12 @@
-/* Original header CSS remains unchanged */
-.header{
+.header {
     height: 34vw;
     margin: 30px auto;
     background: url('/header_img.png') no-repeat;
-    background-size:contain;
+    background-size: contain;
     position: relative;
 }
-.header-contents{
+
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -17,74 +17,61 @@
     left: 6vw;
     animation: fadeIn 3s;
 }
-.header-contents h2{
-    font-weight:500;
+
+.header-contents h2 {
+    font-weight: 500;
     color: white;
-    font-size: max(4.5vw,22px);
+    font-size: max(4.5vw, 22px);
 }
-.header-contents p{
+
+.header-contents p {
     color: white;
     font-size: 1vw;
 }
 
-/* Enhanced button styles */
-.header-contents button{
+/* Simplified button styles - removed all hover effects */
+.header-contents button {
     border: none;
     color: #747474;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background: white;
-    font-size: max(1vw,13px);
+    font-size: max(1vw, 13px);
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Button hover effects */
+/* Remove all hover transformations and animations */
 .header-contents button:hover {
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #747474; /* Keep original color on hover */
+    transform: none; /* Remove translateY effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Keep original shadow */
 }
 
-/* Creating a background fill effect on hover */
+/* Remove the ::before pseudo-element animation */
 .header-contents button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #FF4C24;
-    transition: all 0.3s ease;
-    z-index: -1;
-}
-
-.header-contents button:hover::before {
-    width: 100%;
+    content: none; /* Completely remove the background fill effect */
 }
 
 /* Media queries remain unchanged */
 @media (max-width:1050px) {
-    .header{
+    .header {
         height: 38vw;
     }
-    .header-contents{
+    .header-contents {
         max-width: 45%;
     }
 }
-@media(max-width:750px){
-    .header-contents{
+
+@media (max-width:750px) {
+    .header-contents {
         max-width: 55%;
     }
-    .header-contents p{
-       display: none;
+    .header-contents p {
+        display: none;
     }
-    .header-contents button{
+    .header-contents button {
         padding: 2vw 4vw;
     }
 }
