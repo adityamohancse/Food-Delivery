@@ -7,6 +7,15 @@
 
 .navbar .logo {
     width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 76, 36, 0.3);
 }
 
 .navbar-menu {
@@ -17,9 +26,47 @@
     font-size: 18px;
 }
 
+/* Target Link and a elements */
+.navbar-menu a, 
+.navbar-menu Link {
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: #49557E;
+}
+
+.navbar-menu a:hover, 
+.navbar-menu Link:hover {
+    color: #FF4C24;
+}
+
+/* Underline effect for navbar menu items */
+.navbar-menu a::after,
+.navbar-menu Link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #FF4C24;
+    transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu Link:hover::after {
+    width: 100%;
+}
+
 .navbar-menu .active {
     padding-bottom: 2px;
     border-bottom: 2px solid #49557E;
+}
+
+/* Update active state to match hover state */
+.navbar-menu .active:hover {
+    border-bottom: 2px solid #FF4C24;
 }
 
 .navbar-right {
@@ -28,11 +75,17 @@
     gap: 40px;
 }
 
-.navbar-search-icon{
-position: relative;
+.navbar-search-icon {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.navbar-search-icon .dot{
+.navbar-search-icon:hover {
+    transform: scale(1.1);
+}
+
+.navbar-search-icon .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
@@ -55,31 +108,51 @@ position: relative;
 
 .navbar-right button:hover {
     background: #fff4f2;
+    color: #FF4C24;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 76, 36, 0.15);
 }
 
-.navbar-profile{
+.navbar-profile {
     position: relative;
-
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
-.navbar-profile-dropdown{
+
+.navbar-profile:hover {
+    transform: scale(1.05);
+}
+
+.navbar-profile-dropdown {
     position: absolute;
     display: none;
     right: 0;
     z-index: 1;
 }
-.navbar-profile-dropdown li{
+
+.navbar-profile-dropdown li {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
-.navbar-profile-dropdown img{
+
+.navbar-profile-dropdown img {
     width: 20px;
+    transition: transform 0.2s ease;
 }
-.navbar-profile-dropdown li:hover{
+
+.navbar-profile-dropdown li:hover {
     color: #FF4C24;
+    transform: translateX(3px);
 }
-.navbar-profile:hover .navbar-profile-dropdown{
+
+.navbar-profile-dropdown li:hover img {
+    transform: scale(1.1);
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -89,12 +162,27 @@ position: relative;
     border: 1px solid tomato;
     outline: 2px solid white;
     list-style: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease;
 }
-.navbar-profile hr{
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-profile hr {
     background-color: gray;
     height: 1px;
     border: none;
 }
+
 @media (max-width:1050px) {
     .navbar .logo {
         width: 140px;
