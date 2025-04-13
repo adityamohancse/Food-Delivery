@@ -1,3 +1,4 @@
+/* Original header CSS remains unchanged */
 .header{
     height: 34vw;
     margin: 30px auto;
@@ -25,6 +26,8 @@
     color: white;
     font-size: 1vw;
 }
+
+/* Enhanced button styles */
 .header-contents button{
     border: none;
     color: #747474;
@@ -33,7 +36,39 @@
     background: white;
     font-size: max(1vw,13px);
     border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Button hover effects */
+.header-contents button:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Creating a background fill effect on hover */
+.header-contents button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #FF4C24;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.header-contents button:hover::before {
+    width: 100%;
+}
+
+/* Media queries remain unchanged */
 @media (max-width:1050px) {
     .header{
         height: 38vw;
