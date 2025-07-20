@@ -1,7 +1,3 @@
-Of course! Adding direct links for the admin panel and the user login page makes the project much easier to test and demonstrate.
-
-Here is the updated README with a new section for direct access links.
-
 # 🍔 Full-Stack Food Delivery Website
 
 This is a complete MERN stack food delivery application featuring a customer-facing frontend, a powerful admin panel, and a robust backend. Users can browse food items, add them to a cart, place orders, and pay online, while administrators can manage products and track orders.
