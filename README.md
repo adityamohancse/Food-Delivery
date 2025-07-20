@@ -9,7 +9,7 @@ This is a complete MERN stack food delivery application featuring a customer-fac
 ### **Live Demo & Access Links**
 
 *   [**➥ Live Demo (Customer View)**](https://food-del-fronted-slyl.onrender.com/) 
-*   [**➥ Admin Panel**](https://food-del-admin-qnsc.onrender.com/) *(Replace with your deployed admin URL)*
+*   [**➥ Admin Panel**](https://food-del-admin-qnsc.onrender.com/) 
 
 ### **Features**
 *   **Dynamic Frontend**: A responsive and interactive user interface built with React.
