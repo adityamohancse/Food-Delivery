@@ -115,4 +115,4 @@ You need to update the currency and charges in three different places to ensure 
 *   **For Frontend Display**: Open `frontend/src/context/StoreContext.jsx`. Update the currency symbol and delivery charge for the user view[1].
 *   **For Admin Display**: Open `admin/src/assets/assets.js`. Update the currency symbol for the admin panel[1].
 
-[1] https://www.youtube.com/watch?v=xZ5eg69nC4M
+
